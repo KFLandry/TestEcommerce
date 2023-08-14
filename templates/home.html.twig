@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+	<section>
+		Bienvenue sur Le Site eCommerce!
+	</br>
+	<a href="{{ path('app_register') }}">Enregistrer vous
+	</a>
+	ou
+	<a href="{{ path('app_login') }}">connecter-vous si vous avez un compte
+	</a>
+</br>
+<a href="{{ path('github_login') }}">
+	<span>Login with gitHub</span><br>
+	<a href="{{ path('google_login') }}">
+		<span>
+			Login with google</span>
+	</section>
+{% endblock %}

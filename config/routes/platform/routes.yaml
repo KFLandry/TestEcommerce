@@ -1,0 +1,10 @@
+# .platform/routes.yaml
+# Si un utilisateur arrive sur le site en HTTPS, appelez l'application "app"
+"https://{default}/":
+  type: upstream
+  upstream: "app:http"
+
+# Si l'utilisateur arrive sur l'application en www, le rediriger vers https://{default}/
+"https://www.{default}/":
+  type: redirect
+  to: "https://{default}/"
